@@ -6,6 +6,13 @@ C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Sal
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.runtimeconfig.json
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.dll
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.pdb
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.csproj.AssemblyReference.cache
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.AssemblyInfoInputs.cache
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.AssemblyInfo.cs
@@ -24,6 +31,7 @@ C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\sta
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\bundle\SalesGamerWEB.styles.css
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\projectbundle\SalesGamerWEB.bundle.scp.css
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.csproj.CopyComplete
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.dll
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\refint\SalesGamerWEB.dll
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.pdb
