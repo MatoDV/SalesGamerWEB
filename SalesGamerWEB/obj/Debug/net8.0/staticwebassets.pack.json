@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\fontawesome.css"
     },
     {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\css\\owl.css",
       "PackagePath": "staticwebassets\\css\\owl.css"
     },
@@ -149,6 +153,10 @@
       "PackagePath": "staticwebassets\\js\\isotope.min.js"
     },
     {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\js\\owl-carousel.js",
       "PackagePath": "staticwebassets\\js\\owl-carousel.js"
     },
@@ -223,6 +231,38 @@
     {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.woff2"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SalesGamerWEB.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -30,3 +30,16 @@ app.MapControllerRoute(
 app.Run();
 
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "login",
+        pattern: "/Login",
+        defaults: new { controller = "Login", action = "Index" }
+    );
+
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+});
