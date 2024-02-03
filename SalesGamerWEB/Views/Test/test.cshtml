@@ -1,0 +1,43 @@
+﻿@model List<Producto>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos</title>
+</head>
+<body>
+
+    <h2>Lista de Productos</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Distribuidor ID</th>
+                <th>Oferta ID</th>
+                <!-- Puedes agregar más columnas según sea necesario -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var producto in Model)
+            {
+                <tr>
+                    <td>@producto.Id</td>
+                    <td>@producto.Nombre_producto</td>
+                    <td>@producto.Descripcion</td>
+                    <td>@producto.Precio</td>
+                    <td>@producto.Cantidad</td>
+                    <td>@producto.Distribuidor_id</td>
+                    <td>@producto.Oferta_id</td>
+                    <!-- Puedes agregar más celdas según sea necesario -->
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>
