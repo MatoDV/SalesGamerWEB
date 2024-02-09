@@ -106,3 +106,7 @@
 
 
 })(window.jQuery);
+
+$(document).ready(function () {
+	$("#asd").html("a");
+});

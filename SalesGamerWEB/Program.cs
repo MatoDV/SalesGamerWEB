@@ -1,4 +1,6 @@
 
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Runtime.InteropServices;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,6 +47,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute(
         name: "test",
         pattern: "/Test",
-        defaults: new {action = "test" }
+        defaults: new { controller = "Producto",action = "test" }
     );
 });
