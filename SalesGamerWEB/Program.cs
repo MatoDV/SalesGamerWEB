@@ -1,19 +1,23 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SalesGamerWEB.Controllers;
+using SalesGamerWEB.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<SalesGamerDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configure the database connection
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 DB_Controller.Initialize(builder.Configuration);
 
-var app = builder.Build();
+builder.Services.AddControllersWithViews();
 
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

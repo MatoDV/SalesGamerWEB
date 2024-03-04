@@ -10,7 +10,7 @@ namespace SalesGamerWEB.Controllers
     {
         public IActionResult Index()
         {
-            List<Producto> productos = ProductoController.obtenerProductos();
+            var productos = obtenerProductos();
             return View(productos);
         }
         //OBTENER EL PRODUCTO

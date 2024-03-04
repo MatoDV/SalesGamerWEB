@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace SalesGamerWEB.Controllers
 {
@@ -21,13 +22,13 @@ namespace SalesGamerWEB.Controllers
                 connection = new SqlConnection(connectionString);
 
                 connection.Open();
-                Console.WriteLine("Conexión establecida correctamente.");
+                Debug.WriteLine("Conexión establecida correctamente.");
 
                 // No cerrar la conexión aquí
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Error al establecer la conexión: " + ex.Message);
+                Debug.WriteLine("Error al establecer la conexión: " + ex.Message);
             }
         }
     }

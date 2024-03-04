@@ -39,7 +39,7 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-                                @if (Model != null && Model.Count > 0)
+                                @if (Model != null)
                                 {
                                     var producto = Model.FirstOrDefault(p => p.Id == 25);
                                     if (producto != null)
