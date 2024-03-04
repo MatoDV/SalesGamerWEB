@@ -1,12 +1,16 @@
-
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Runtime.InteropServices;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using SalesGamerWEB.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Configure the database connection
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+DB_Controller.Initialize(builder.Configuration);
 
 var app = builder.Build();
 

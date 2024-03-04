@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\OptixG271C.png",
+      "PackagePath": "staticwebassets\\img\\OptixG271C.png"
+    },
+    {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\about-hero.svg",
       "PackagePath": "staticwebassets\\img\\about-hero.svg"
     },
@@ -155,6 +159,18 @@
     {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_10.jpg",
       "PackagePath": "staticwebassets\\img\\product_single_10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rtx3090triogaming.png",
+      "PackagePath": "staticwebassets\\img\\rtx3090triogaming.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rtx4090.png",
+      "PackagePath": "staticwebassets\\img\\rtx4090.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ryzen95950x.png",
+      "PackagePath": "staticwebassets\\img\\ryzen95950x.png"
     },
     {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_01.jpg",
