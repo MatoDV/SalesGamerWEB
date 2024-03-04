@@ -70,9 +70,9 @@ C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\sta
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\bundle\SalesGamerWEB.styles.css
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\projectbundle\SalesGamerWEB.bundle.scp.css
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.csproj.CopyComplete
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.dll
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\refint\SalesGamerWEB.dll
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.pdb
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.genruntimeconfig.cache
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\ref\SalesGamerWEB.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGam.C11D92E5.Up2Date

@@ -44,9 +44,28 @@ app.UseEndpoints(endpoints =>
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}"
     );
+
     endpoints.MapControllerRoute(
-        name: "test",
-        pattern: "/Test",
-        defaults: new { controller = "Producto",action = "test" }
+        name: "productos",
+        pattern: "/Productos",
+        defaults: new { controller = "Producto", action = "Index" }
+    );
+
+    endpoints.MapControllerRoute(
+        name: "About",
+        pattern: "/About",
+        defaults: new { controller = "About", action = "Index" }
+    ); 
+    
+    endpoints.MapControllerRoute(
+        name: "Contacto",
+        pattern: "/Contacto",
+        defaults: new { controller = "Contacto", action = "Index" }
+    );
+
+    endpoints.MapControllerRoute(
+        name: "Compra",
+        pattern: "/Compra",
+        defaults: new { controller = "Compra", action = "Index" }
     );
 });
