@@ -1,6 +1,5 @@
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\appsettings.json
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.staticwebassets.runtime.json
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.exe
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.deps.json
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.runtimeconfig.json
@@ -60,6 +59,13 @@ C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\Sal
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.RazorAssemblyInfo.cache
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.RazorAssemblyInfo.cs
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.sourcelink.json
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\refint\SalesGamerWEB.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.pdb
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.genruntimeconfig.cache
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\ref\SalesGamerWEB.dll
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGam.C11D92E5.Up2Date
+C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\SalesGamerWEB.staticwebassets.runtime.json
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\staticwebassets\msbuild.SalesGamerWEB.Microsoft.AspNetCore.StaticWebAssets.props
@@ -70,9 +76,3 @@ C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\sta
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\bundle\SalesGamerWEB.styles.css
 C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\scopedcss\projectbundle\SalesGamerWEB.bundle.scp.css
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.dll
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\refint\SalesGamerWEB.dll
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.pdb
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.genruntimeconfig.cache
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\ref\SalesGamerWEB.dll
-C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGam.C11D92E5.Up2Date

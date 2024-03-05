@@ -1,13 +1,32 @@
 ﻿@{
-	Layout = "Login_Layout"; // Establecer el layout a utilizar
+    Layout = "Login_Layout"; // Establecer el layout a utilizar
 }
+
+@model SalesGamerWEB.Models.Usuario
+
 <body>
-<div class="login">
-    <div class="form">
-        <h2>Welcome</h2>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <input type="submit" value="Sign In" class="submit">
+    <div class="login">
+        <div class="form">
+            <h2>Login</h2>
+            <form asp-controller="Login" asp-action="Authenticate" method="post">
+                <!-- Campo de usuario -->
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username" name="usr">
+                    <!-- Mensaje de error de validación para el campo de usuario -->
+                    @Html.ValidationMessage("usr", "", new { @class = "text-danger" })
+                </div>
+                <!-- Campo de contraseña -->
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" name="pass">
+                    <!-- Mensaje de error de validación para el campo de contraseña -->
+                    @Html.ValidationMessage("pass", "", new { @class = "text-danger" })
+                </div>
+                <!-- Mensaje de error general -->
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <!-- Botón de submit -->
+                <input type="submit" value="Sign In" class="submit">
+                <a href="/Register">Registrate</a>
+            </form>
+        </div>
     </div>
-</div>
 </body>

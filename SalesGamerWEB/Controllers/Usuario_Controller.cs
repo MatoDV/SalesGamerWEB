@@ -1,4 +1,5 @@
 ﻿using SalesGamerWEB.Models;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
@@ -9,16 +10,12 @@ namespace SalesGamerWEB.Controllers
         // GET ONE
         public static bool autenticar(string usr, string pass, bool hasheado)
         {
-            Usuario user = new Usuario();
-            string query = "select * from dbo.Usuario where nombre_usuario = @usr and contrasena_usuario = @pass;";
+            Usuario user = null; // Inicializamos como null para indicar que no se encontró ningún usuario
+            string query = "SELECT * FROM dbo.Usuario WHERE nombre_usuario = @usr AND contrasena_usuario = @pass;";
 
             SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
             cmd.Parameters.AddWithValue("@usr", usr);
-            if (hasheado)
-            {
-                cmd.Parameters.AddWithValue("@pass", pass);
-            }
-
+            cmd.Parameters.AddWithValue("@pass", pass);
 
             try
             {
@@ -27,13 +24,16 @@ namespace SalesGamerWEB.Controllers
 
                 while (reader.Read())
                 {
-                    Trace.WriteLine("Usr encontrado, nombre: " + reader.GetString(1));
+                    // Se encontró un usuario con las credenciales proporcionadas
                     user = new Usuario(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), "", reader.GetString(4), reader.GetString(5), reader.GetInt32(6), reader.GetString(7), reader.GetInt32(8));
+                    break; // Salir del bucle ya que se encontró el usuario
                 }
 
                 reader.Close();
                 DB_Controller.connection.Close();
-                return true;
+
+                // Devolver verdadero si se encontró un usuario correspondiente, falso de lo contrario
+                return user != null;
             }
             catch (Exception ex)
             {
@@ -41,49 +41,6 @@ namespace SalesGamerWEB.Controllers
             }
         }
 
-
-        // POST
-
-        public static bool crearUsuario(Usuario usr)
-        {
-            //Darlo de alta en la BBDD
-
-            string query = "insert into dbo.Usuario values" +
-               "(@id, " +
-               "@nombre_usuario, " +
-               "@mail, " +
-               "@contrasena_usuario, " +
-               "@nombre, " +
-               "@apellido, " +
-               "@telefono, " +
-               "@direccion, " +
-               "@rol);";
-
-            SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
-            cmd.Parameters.AddWithValue("@id", obtenerMaxId() + 1);
-            cmd.Parameters.AddWithValue("@nombre_usuario", usr.usuario);
-            cmd.Parameters.AddWithValue("@mail", usr.Mail);
-            cmd.Parameters.AddWithValue("@contrasena_usuario", usr.Contraseña);
-            cmd.Parameters.AddWithValue("@nombre", usr.Nombre);
-            cmd.Parameters.AddWithValue("@apellido", usr.Apellido);
-            cmd.Parameters.AddWithValue("@telefono", usr.Telefono);
-            cmd.Parameters.AddWithValue("@direccion", usr.Direccion);
-            cmd.Parameters.AddWithValue("@rol", usr.ID_rol);
-
-
-            try
-            {
-                DB_Controller.connection.Open();
-                cmd.ExecuteNonQuery();
-                DB_Controller.connection.Close();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Hay un error en la query: " + ex.Message);
-            }
-
-        }
 
 
         // OBTENER EL MAX ID
@@ -210,7 +167,6 @@ namespace SalesGamerWEB.Controllers
 
             try
             {
-                DB_Controller.connection.Open();
                 cmd.ExecuteNonQuery();
                 DB_Controller.connection.Close();
                 return true;
@@ -221,6 +177,44 @@ namespace SalesGamerWEB.Controllers
             }
 
         }
+        public static bool crearUsuario(Usuario usr)
+        {
+            // Dar de alta en la BBDD
+
+            string query = "INSERT INTO dbo.Usuario (id,nombre_usuario, mail, contrasena_usuario, nombre, apellido, telefono, direccion) " +
+                           "VALUES (@id, @nombre_usuario, @mail, @contrasena_usuario, @nombre, @apellido, @telefono, @direccion);";
+
+            SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
+            cmd.Parameters.AddWithValue("@id", obtenerMaxId() + 1);
+            cmd.Parameters.AddWithValue("@nombre_usuario", usr.usuario);
+            cmd.Parameters.AddWithValue("@mail", usr.Mail);
+            cmd.Parameters.AddWithValue("@contrasena_usuario", usr.Contraseña);
+            cmd.Parameters.AddWithValue("@nombre", usr.Nombre);
+            cmd.Parameters.AddWithValue("@apellido", usr.Apellido);
+            cmd.Parameters.AddWithValue("@telefono", usr.Telefono);
+            cmd.Parameters.AddWithValue("@direccion", usr.Direccion);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                return true;
+                DB_Controller.connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Hay un error en la query: " + ex.Message);
+            }
+            finally
+            {
+                if (DB_Controller.connection.State == ConnectionState.Open)
+                {
+                    DB_Controller.connection.Close();
+                }
+            }
+        }
+
+        
 
         public static bool eliminarUsuario(Usuario usuarioEliminar)
         {

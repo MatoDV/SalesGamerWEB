@@ -8,9 +8,30 @@ namespace SalesGamerWEB.Controllers
 {
     public class ProductoController : Controller
     {
+        private readonly SalesGamerDbContext _context;
         public IActionResult Index()
         {
             return View();
+        }
+        
+        public ProductoController(SalesGamerDbContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult Detalle()
+        {
+            // Buscar el producto con Id 25 en la base de datos
+            Producto producto = _context.Productos.FirstOrDefault(p => p.Id == 25);
+
+            if (producto != null)
+            {
+                return View(producto); // Pasar el producto encontrado a la vista
+            }
+            else
+            {
+                return View(); // Podrías redirigir a una vista de error si no se encuentra el producto
+            }
         }
         //OBTENER EL PRODUCTO
         public static List<Producto> obtenerProductos()
@@ -22,7 +43,6 @@ namespace SalesGamerWEB.Controllers
 
                 try
                 {
-                    DB_Controller.connection.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())

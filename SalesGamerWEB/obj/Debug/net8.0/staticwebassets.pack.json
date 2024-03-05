@@ -49,8 +49,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\G435-BLANCO.png",
+      "PackagePath": "staticwebassets\\img\\G435-BLANCO.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\MOUSE.jpg",
+      "PackagePath": "staticwebassets\\img\\MOUSE.jpg"
+    },
+    {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\OptixG271C.png",
       "PackagePath": "staticwebassets\\img\\OptixG271C.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\PLACADEVIDEO.jpg",
+      "PackagePath": "staticwebassets\\img\\PLACADEVIDEO.jpg"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\PROCESADOR.jpg",
+      "PackagePath": "staticwebassets\\img\\PROCESADOR.jpg"
     },
     {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\about-hero.svg",
@@ -61,20 +77,16 @@
       "PackagePath": "staticwebassets\\img\\ajax-loader.gif"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\apple-icon.png",
-      "PackagePath": "staticwebassets\\img\\apple-icon.png"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\b650I.png",
+      "PackagePath": "staticwebassets\\img\\b650I.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\banner_img_01.jpg",
-      "PackagePath": "staticwebassets\\img\\banner_img_01.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\b700h.png",
+      "PackagePath": "staticwebassets\\img\\b700h.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\banner_img_02.jpg",
-      "PackagePath": "staticwebassets\\img\\banner_img_02.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\banner_img_03.jpg",
-      "PackagePath": "staticwebassets\\img\\banner_img_03.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\bluesnowball.png",
+      "PackagePath": "staticwebassets\\img\\bluesnowball.png"
     },
     {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\brand_01.png",
@@ -93,72 +105,120 @@
       "PackagePath": "staticwebassets\\img\\brand_04.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\category_img_01.jpg",
-      "PackagePath": "staticwebassets\\img\\category_img_01.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\brand_05.png",
+      "PackagePath": "staticwebassets\\img\\brand_05.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\category_img_02.jpg",
-      "PackagePath": "staticwebassets\\img\\category_img_02.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\brand_06.png",
+      "PackagePath": "staticwebassets\\img\\brand_06.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\category_img_03.jpg",
-      "PackagePath": "staticwebassets\\img\\category_img_03.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\brand_07.png",
+      "PackagePath": "staticwebassets\\img\\brand_07.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\favicon.ico",
-      "PackagePath": "staticwebassets\\img\\favicon.ico"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\brand_08.png",
+      "PackagePath": "staticwebassets\\img\\brand_08.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\feature_prod_01.jpg",
-      "PackagePath": "staticwebassets\\img\\feature_prod_01.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\corei711700k.png",
+      "PackagePath": "staticwebassets\\img\\corei711700k.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\feature_prod_02.jpg",
-      "PackagePath": "staticwebassets\\img\\feature_prod_02.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\crystal680xrgb.png",
+      "PackagePath": "staticwebassets\\img\\crystal680xrgb.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\feature_prod_03.jpg",
-      "PackagePath": "staticwebassets\\img\\feature_prod_03.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\dominatorplatinum.png",
+      "PackagePath": "staticwebassets\\img\\dominatorplatinum.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_01.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_01.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\g435.png",
+      "PackagePath": "staticwebassets\\img\\g435.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_02.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_02.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\g502hero.png",
+      "PackagePath": "staticwebassets\\img\\g502hero.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_03.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_03.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\g733.png",
+      "PackagePath": "staticwebassets\\img\\g733.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_04.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_04.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\g915.png",
+      "PackagePath": "staticwebassets\\img\\g915.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_05.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_05.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\gold7.2k.png",
+      "PackagePath": "staticwebassets\\img\\gold7.2k.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_06.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_06.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\gp-p850gm.png",
+      "PackagePath": "staticwebassets\\img\\gp-p850gm.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_07.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_07.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\gprox-blanco.png",
+      "PackagePath": "staticwebassets\\img\\gprox-blanco.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_08.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_08.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\gprox.png",
+      "PackagePath": "staticwebassets\\img\\gprox.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_09.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_09.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\gtx1080ti.png",
+      "PackagePath": "staticwebassets\\img\\gtx1080ti.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\product_single_10.jpg",
-      "PackagePath": "staticwebassets\\img\\product_single_10.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\gtx1660.png",
+      "PackagePath": "staticwebassets\\img\\gtx1660.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\i310100f.png",
+      "PackagePath": "staticwebassets\\img\\i310100f.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\i510600k.png",
+      "PackagePath": "staticwebassets\\img\\i510600k.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\i910900k.png",
+      "PackagePath": "staticwebassets\\img\\i910900k.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\i911900k.png",
+      "PackagePath": "staticwebassets\\img\\i911900k.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\logolocardo3.png",
+      "PackagePath": "staticwebassets\\img\\logolocardo3.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\obsidian1000d.png",
+      "PackagePath": "staticwebassets\\img\\obsidian1000d.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\optix6241.png",
+      "PackagePath": "staticwebassets\\img\\optix6241.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\p750gm.png",
+      "PackagePath": "staticwebassets\\img\\p750gm.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\p850gm.png",
+      "PackagePath": "staticwebassets\\img\\p850gm.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rtx2080ti.png",
+      "PackagePath": "staticwebassets\\img\\rtx2080ti.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rtx3080.png",
+      "PackagePath": "staticwebassets\\img\\rtx3080.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rtx3090.png",
+      "PackagePath": "staticwebassets\\img\\rtx3090.png"
     },
     {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rtx3090triogaming.png",
@@ -169,52 +229,44 @@
       "PackagePath": "staticwebassets\\img\\rtx4090.png"
     },
     {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rx6700xt.png",
+      "PackagePath": "staticwebassets\\img\\rx6700xt.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\rx6800xt.png",
+      "PackagePath": "staticwebassets\\img\\rx6800xt.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ryzen33200g.png",
+      "PackagePath": "staticwebassets\\img\\ryzen33200g.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ryzen33300x.png",
+      "PackagePath": "staticwebassets\\img\\ryzen33300x.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ryzen55600x.png",
+      "PackagePath": "staticwebassets\\img\\ryzen55600x.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ryzen75800x.png",
+      "PackagePath": "staticwebassets\\img\\ryzen75800x.png"
+    },
+    {
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ryzen95900x.png",
+      "PackagePath": "staticwebassets\\img\\ryzen95900x.png"
+    },
+    {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ryzen95950x.png",
       "PackagePath": "staticwebassets\\img\\ryzen95950x.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_01.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_01.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\vengeancelpx.png",
+      "PackagePath": "staticwebassets\\img\\vengeancelpx.png"
     },
     {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_02.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_02.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_03.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_03.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_04.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_04.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_05.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_05.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_06.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_06.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_07.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_07.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_08.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_08.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_09.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_09.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_10.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_10.jpg"
-    },
-    {
-      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\shop_11.jpg",
-      "PackagePath": "staticwebassets\\img\\shop_11.jpg"
+      "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\x570si.png",
+      "PackagePath": "staticwebassets\\img\\x570si.png"
     },
     {
       "Id": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\js\\bootstrap.bundle.min.js",
