@@ -3,52 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\controllers\\db_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:controllers\\db_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\controllers\\db_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:controllers\\db_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\models\\salesgamerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:models\\salesgamerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\views\\contacto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:views\\contacto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\views\\compra\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:views\\compra\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos\\documents\\github\\salesgamerweb\\salesgamerweb\\controllers\\db_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:controllers\\db_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,162 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T16:21:13.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SalesGamerDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Models\\SalesGamerDbContext.cs",
-              "RelativeDocumentMoniker": "Models\\SalesGamerDbContext.cs",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Models\\SalesGamerDbContext.cs",
-              "RelativeToolTip": "Models\\SalesGamerDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T16:59:05.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DB_Controller.cs",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\DB_Controller.cs",
-              "RelativeDocumentMoniker": "Controllers\\DB_Controller.cs",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\DB_Controller.cs",
-              "RelativeToolTip": "Controllers\\DB_Controller.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAqwCMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T16:17:50.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DB_Connection.cs",
               "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\DB_Connection.cs",
               "RelativeDocumentMoniker": "Controllers\\DB_Connection.cs",
               "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\DB_Connection.cs",
               "RelativeToolTip": "Controllers\\DB_Connection.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T16:17:50.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-04T16:07:46.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductoController.cs",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\ProductoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductoController.cs",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\ProductoController.cs",
-              "RelativeToolTip": "Controllers\\ProductoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T16:03:25.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Models\\Producto.cs",
-              "RelativeDocumentMoniker": "Models\\Producto.cs",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Models\\Producto.cs",
-              "RelativeToolTip": "Models\\Producto.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAwwCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T16:02:32.668Z",
+              "WhenOpened": "2024-03-05T03:17:34.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACgAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T00:35:43.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\About\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\About\\Index.cshtml",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\About\\Index.cshtml",
-              "RelativeToolTip": "Views\\About\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T13:42:13.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Producto\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Producto\\Index.cshtml",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Producto\\Index.cshtml",
-              "RelativeToolTip": "Views\\Producto\\Index.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T00:25:17.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Contacto\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Contacto\\Index.cshtml",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Contacto\\Index.cshtml",
-              "RelativeToolTip": "Views\\Contacto\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T13:42:26.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Compra\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Compra\\Index.cshtml",
-              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Compra\\Index.cshtml",
-              "RelativeToolTip": "Views\\Compra\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T00:27:32.036Z",
+              "Title": "DB_Controller.cs",
+              "DocumentMoniker": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\DB_Controller.cs",
+              "RelativeDocumentMoniker": "Controllers\\DB_Controller.cs",
+              "ToolTip": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\DB_Controller.cs",
+              "RelativeToolTip": "Controllers\\DB_Controller.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T03:17:21.159Z",
               "EditorCaption": ""
             }
           ]

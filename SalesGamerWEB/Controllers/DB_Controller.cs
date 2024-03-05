@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
@@ -29,6 +30,14 @@ namespace SalesGamerWEB.Controllers
             catch (SqlException ex)
             {
                 Debug.WriteLine("Error al establecer la conexión: " + ex.Message);
+            }
+        }
+        public static void CloseConnection()
+        {
+            if (connection != null && connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+                Debug.WriteLine("Conexión cerrada correctamente.");
             }
         }
     }
