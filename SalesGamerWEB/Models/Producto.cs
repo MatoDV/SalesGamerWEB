@@ -26,6 +26,12 @@
             this.img = Imagen;
             this.Categoria_id = categoria_id;
         }
+        public Producto(int id, string nombre)
+        {
+            this.Id = id;
+            this.Nombre_producto = nombre;
+            
+        }
 
         public Producto()
         {
