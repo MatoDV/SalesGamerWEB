@@ -8,74 +8,61 @@ namespace SalesGamerWEB.Controllers
 {
     public class ProductoController : Controller
     {
-        private readonly SalesGamerDbContext _context;
+        private readonly ILogger<ProductoController> _logger;
+
+        public ProductoController(ILogger<ProductoController> logger)
+        {
+            _logger = logger;
+        }
         public IActionResult Index()
         {
-            return View();
-        }
-        
-        public ProductoController(SalesGamerDbContext context)
-        {
-            _context = context;
+            List<Producto> productos = obtenerProductos();
+            return View(productos);
         }
 
-        public IActionResult Detalle()
-        {
-            // Buscar el producto con Id 25 en la base de datos
-            Producto producto = _context.Productos.FirstOrDefault(p => p.Id == 25);
-
-            if (producto != null)
-            {
-                return View(producto); // Pasar el producto encontrado a la vista
-            }
-            else
-            {
-                return View(); // Podrías redirigir a una vista de error si no se encuentra el producto
-            }
-        }
         //OBTENER EL PRODUCTO
         public static List<Producto> obtenerProductos()
+        {
+            List<Producto> list = new List<Producto>();
+            string query = "SELECT * FROM dbo.Producto;";
+
+            // Abre la conexión
+            DB_Controller.connection.Open();
+
+            try
             {
-                List<Producto> list = new List<Producto>();
-                string query = "SELECT * FROM dbo.Producto;";
-
                 SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                try
+                while (reader.Read())
                 {
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    Producto producto = new Producto(
+                        id: reader.GetInt32(reader.GetOrdinal("Id")),
+                        nombre: reader.GetString(reader.GetOrdinal("Nombre_producto")),
+                        precio: reader.GetInt32(reader.GetOrdinal("Precio"))
+                    );
 
-                    while (reader.Read())
-                    {
-                        Producto producto = new Producto(
-                            id: reader.GetInt32(reader.GetOrdinal("Id")),
-                            nombre: reader.GetString(reader.GetOrdinal("Nombre_producto")),
-                            desc: reader.GetString(reader.GetOrdinal("Descripcion")),
-                            precio: reader.GetInt32(reader.GetOrdinal("Precio")),
-                            cantidad: reader.GetInt32(reader.GetOrdinal("Cantidad")),
-                            distribuidor_id: ObtenerDistribuidorId(reader.GetInt32(reader.GetOrdinal("Distribuidor_id"))),
-                            oferta_id: ObtenerOfertaId(reader.GetInt32(reader.GetOrdinal("Oferta_id"))),
-                            Imagen: (byte[])reader["img"],
-                            categoria_id: ObtenerCategoriaId(reader.GetInt32(reader.GetOrdinal("Categoria_id")))
-                        );
-
-                        list.Add(producto);
-                        Trace.WriteLine("Producto encontrado, nombre: " + producto.Nombre_producto);
-                    }
-
-                    reader.Close();
-                    DB_Controller.connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Hay un error en la query: " + ex.Message);
+                    list.Add(producto);
+                    Trace.WriteLine("Producto encontrado, nombre: " + producto.Nombre_producto);
                 }
 
-                return list;
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Hay un error en la query: " + ex.Message);
+            }
+            finally
+            {
+                // Asegúrate de cerrar la conexión en el bloque finally
+                DB_Controller.connection.Close();
             }
 
-            //SACAR EL MAXID
-            public static int obtenerMaxId()
+            return list;
+        }
+
+        //SACAR EL MAXID
+        public static int obtenerMaxId()
             {
                 int MaxId = 0;
                 string query = "select max(id) from dbo.Producto;";
