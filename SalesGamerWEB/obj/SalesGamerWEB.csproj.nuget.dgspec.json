@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj": {}
+    "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj": {
+    "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj",
+        "projectUniqueName": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj",
         "projectName": "SalesGamerWEB",
-        "projectPath": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj",
-        "packagesPath": "C:\\Users\\matos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matos\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\obj\\",
+        "projectPath": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\SalesGamerWEB.csproj",
+        "packagesPath": "C:\\Users\\matos.MATIAS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\matos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matos.MATIAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,10 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nugets.trabajo.gob.ar/nuget": {},
-          "https://packages.trabajo.gob.ar/nuget": {},
-          "https://packagesdesa.trabajo.gob.ar/nuget": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -88,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

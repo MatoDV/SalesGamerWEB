@@ -9,83 +9,83 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SalesGamerWEB
 build_property.RootNamespace = SalesGamerWEB
-build_property.ProjectDir = C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\
+build_property.ProjectDir = C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\matos\Documents\GitHub\SalesGamerWEB\SalesGamerWEB
+build_property.MSBuildProjectDirectory = C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/About/Index.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Compra/Index.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Compra/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Contacto/Index.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Contacto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Home/Index.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Home/Privacy.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Login/Index.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Producto/Index.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Producto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Register/Index.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Register/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/About_Layout.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/About_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFib3V0X0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Compra_Layout.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Compra_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXByYV9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Contacto_Layout.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Contacto_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbnRhY3RvX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Error.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Login_Layout.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Login_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Producto_Layout.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/Producto_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByb2R1Y3RvX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/_ViewImports.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/_ViewStart.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/matos/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/_Layout.cshtml]
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-kzt9lv41ag

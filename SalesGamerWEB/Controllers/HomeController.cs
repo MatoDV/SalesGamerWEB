@@ -25,31 +25,42 @@ namespace SalesGamerWEB.Controllers
             List<Producto> list = new List<Producto>();
             string query = "SELECT * FROM dbo.Producto;";
 
-            SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
-
-            try
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
             {
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    Producto producto = new Producto(
-                        id: reader.GetInt32(reader.GetOrdinal("Id")),
-                        nombre: reader.GetString(reader.GetOrdinal("Nombre_producto")),
-                        desc: reader.GetString(reader.GetOrdinal("Descripcion"))
-                        
-                    );
+                    if (DB_Controller.connection.State != System.Data.ConnectionState.Open)
+                    {
+                        DB_Controller.connection.Open();
+                    }
 
-                    list.Add(producto);
-                    Trace.WriteLine("Producto encontrado, nombre: " + producto.Nombre_producto);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Producto producto = new Producto(
+                                id: reader.GetInt32(reader.GetOrdinal("Id")),
+                                nombre: reader.GetString(reader.GetOrdinal("Nombre_producto")),
+                                desc: reader.GetString(reader.GetOrdinal("Descripcion"))
+                            );
+
+                            list.Add(producto);
+                            Trace.WriteLine("Producto encontrado, nombre: " + producto.Nombre_producto);
+                        }
+                    }
                 }
-
-                reader.Close();
-                DB_Controller.connection.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Hay un error en la query: " + ex.Message);
+                catch (Exception ex)
+                {
+                    // Log exception details here
+                    throw new Exception("Hay un error en la query: " + ex.Message);
+                }
+                finally
+                {
+                    if (DB_Controller.connection.State == System.Data.ConnectionState.Open)
+                    {
+                        DB_Controller.connection.Close();
+                    }
+                }
             }
 
             return list;

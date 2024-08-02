@@ -1,9 +1,11 @@
-﻿@using Microsoft.AspNetCore.Http
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Http
 @model List<Producto>
 @{
     Layout = "Producto_Layout"; // Establecer el layout a utilizar
     int productosPorPagina = 9; // Número de productos por página
-    int paginaActual = Request.QueryString["pagina"].ToString() != "" ? Convert.ToInt32(Request.QueryString["pagina"]) : 1; // Obtiene el número de página actual de la consulta
+    var request = HttpContextAccessor.HttpContext.Request;
+    int paginaActual = request.Query["pagina"].ToString() != "" ? Convert.ToInt32(request.Query["pagina"]) : 1; // Obtiene el número de página actual de la consulta
     int totalProductos = 43; // Total de productos
     int totalPaginas = (int)Math.Ceiling((double)totalProductos / productosPorPagina); // Calcula el número total de páginas
     int indiceInicial = (paginaActual - 1) * productosPorPagina; // Calcula el índice inicial para cargar los productos
@@ -132,7 +134,7 @@
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid" src="~/img/@(producto.Id).png"> <!-- Cambia dinámicamente el src de la imagen -->
+                                    <img class="card-img rounded-0 img-fluid" src="~/img/@(producto.Id).png" style="width: 400px; height: 300px;"> <!-- Cambia dinámicamente el src de la imagen -->
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white mt-2" href="/Compra"><i class="far fa-eye"></i></a></li>
