@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6/toJySf/1CXvfdCOo+BonnBs8pdA/FEt7C06lspBgA=",
+  "Hash": "5jE5vIUhUS37IBfVpr7Lt4F7sDngDpx2kUwo+vy4nx8=",
   "Source": "SalesGamerWEB",
   "BasePath": "_content/SalesGamerWEB",
   "Mode": "Default",
@@ -1081,12 +1081,12 @@
       "OriginalItemSpec": "wwwroot\\img\\9.png"
     },
     {
-      "Identity": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\about-hero.svg",
+      "Identity": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\about-hero.png",
       "SourceId": "SalesGamerWEB",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\",
       "BasePath": "_content/SalesGamerWEB",
-      "RelativePath": "img/about-hero.svg",
+      "RelativePath": "img/about-hero.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1097,7 +1097,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\about-hero.svg"
+      "OriginalItemSpec": "wwwroot\\img\\about-hero.png"
     },
     {
       "Identity": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\img\\ajax-loader.gif",

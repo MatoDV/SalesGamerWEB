@@ -58,7 +58,9 @@ body, ul, li, p, a, label, input, div {
 .h1footer{color:black !important}
 .bg-light { background-color: white !important;}
 .bg-black { background-color: black !important;}
-.bg-success { background-color: #59ab6e !important;}
+.bg-success {
+    background-color: mediumaquamarine !important;
+}
 .btn-success {
   background-color: mediumaquamarine !important;
   border-color: mediumaquamarine !important;
@@ -133,7 +135,9 @@ body, ul, li, p, a, label, input, div {
 /* Services */
 .services-icon-wap {transition: .3s;}
 .services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
-.services-icon-wap:hover {background: #69bb7e;}
+    .services-icon-wap:hover {
+        background: mediumaquamarine;
+    }
 /* Contact map */
 .leaflet-control a, .leaflet-control { font-size: 10px !important;}
 .form-control { border: 1px solid #e8e8e8;}

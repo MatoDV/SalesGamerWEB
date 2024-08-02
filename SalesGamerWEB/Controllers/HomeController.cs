@@ -41,7 +41,8 @@ namespace SalesGamerWEB.Controllers
                             Producto producto = new Producto(
                                 id: reader.GetInt32(reader.GetOrdinal("Id")),
                                 nombre: reader.GetString(reader.GetOrdinal("Nombre_producto")),
-                                desc: reader.GetString(reader.GetOrdinal("Descripcion"))
+                                desc: reader.GetString(reader.GetOrdinal("Descripcion")),
+                                precio: reader.GetInt32(reader.GetOrdinal("Precio"))
                             );
 
                             list.Add(producto);

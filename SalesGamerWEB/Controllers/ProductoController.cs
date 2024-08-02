@@ -14,39 +14,90 @@ namespace SalesGamerWEB.Controllers
         {
             _logger = logger;
         }
-        public IActionResult Index()
+
+        public IActionResult Index(string categoria, int pagina = 1)
         {
-            List<Producto> productos = obtenerProductos();
+            List<Producto> productos = ObtenerProductos(categoria, pagina, out int totalProductos);
+            ViewBag.Categorias = ObtenerCategorias();
+            ViewBag.PaginaActual = pagina;
+            ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalProductos / 9);
+            ViewBag.Categoria = categoria;
             return View(productos);
         }
 
         //OBTENER EL PRODUCTO
-        public static List<Producto> obtenerProductos()
+        public static List<Producto> ObtenerProductos(string categoria, int pagina, out int totalProductos)
         {
             List<Producto> list = new List<Producto>();
-            string query = "SELECT * FROM dbo.Producto;";
+            totalProductos = 0;
 
-            // Abre la conexión
-            DB_Controller.connection.Open();
+            string query = @"SELECT * FROM dbo.Producto";
+            string countQuery = @"SELECT COUNT(*) FROM dbo.Producto";
+
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            if (!string.IsNullOrEmpty(categoria))
+            {
+                query += " WHERE Categoria_id = (SELECT Id FROM dbo.Categoria WHERE Nombre_categoria = @categoria)";
+                countQuery += " WHERE Categoria_id = (SELECT Id FROM dbo.Categoria WHERE Nombre_categoria = @categoria)";
+
+                parameters.Add(new SqlParameter("@categoria", categoria));
+            }
+
+            query += " ORDER BY Id OFFSET @offset ROWS FETCH NEXT @rows ROWS ONLY;";
+
+            // Define offset and rows parameters
+            SqlParameter offsetParam = new SqlParameter("@offset", (pagina - 1) * 9);
+            SqlParameter rowsParam = new SqlParameter("@rows", 9);
+
+            // Add parameters for pagination
+            parameters.Add(offsetParam);
+            parameters.Add(rowsParam);
 
             try
             {
-                SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
-                SqlDataReader reader = cmd.ExecuteReader();
+                DB_Controller.connection.Open();
 
-                while (reader.Read())
+                // Execute count query
+                using (SqlCommand countCmd = new SqlCommand(countQuery, DB_Controller.connection))
                 {
-                    Producto producto = new Producto(
-                        id: reader.GetInt32(reader.GetOrdinal("Id")),
-                        nombre: reader.GetString(reader.GetOrdinal("Nombre_producto")),
-                        precio: reader.GetInt32(reader.GetOrdinal("Precio"))
-                    );
+                    if (parameters.Count > 0 && !string.IsNullOrEmpty(categoria))
+                    {
+                        countCmd.Parameters.Add(parameters.First(p => p.ParameterName == "@categoria"));
+                    }
 
-                    list.Add(producto);
-                    Trace.WriteLine("Producto encontrado, nombre: " + producto.Nombre_producto);
+                    totalProductos = (int)countCmd.ExecuteScalar();
                 }
 
-                reader.Close();
+                // Execute product query
+                using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
+                {
+                    foreach (var param in parameters)
+                    {
+                        if (param.ParameterName != "@offset" && param.ParameterName != "@rows")
+                        {
+                            cmd.Parameters.Add(param);
+                        }
+                    }
+
+                    cmd.Parameters.Add(offsetParam);
+                    cmd.Parameters.Add(rowsParam);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Producto producto = new Producto
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                                Nombre_producto = reader.GetString(reader.GetOrdinal("Nombre_producto")),
+                                Precio = reader.GetInt32(reader.GetOrdinal("Precio"))
+                            };
+
+                            list.Add(producto);
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -54,12 +105,13 @@ namespace SalesGamerWEB.Controllers
             }
             finally
             {
-                // Asegúrate de cerrar la conexión en el bloque finally
                 DB_Controller.connection.Close();
             }
 
             return list;
         }
+
+
 
         //SACAR EL MAXID
         public static int obtenerMaxId()
@@ -157,7 +209,43 @@ namespace SalesGamerWEB.Controllers
                 }
                 return oferta;
             }
-            public static Categoria ObtenerCategoriaId(int id)
+
+        public static List<Categoria> ObtenerCategorias()
+        {
+            List<Categoria> list = new List<Categoria>();
+            string query = "SELECT * FROM dbo.Categoria;";
+
+            try
+            {
+                DB_Controller.connection.Open();
+                SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Categoria categoria = new Categoria
+                    {
+                        Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                        Nombre_categoria = reader.GetString(reader.GetOrdinal("Nombre_categoria"))
+                    };
+
+                    list.Add(categoria);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Hay un error en la query: " + ex.Message);
+            }
+            finally
+            {
+                DB_Controller.connection.Close();
+            }
+
+            return list;
+        }
+        public static Categoria ObtenerCategoriaId(int id)
             {
                 Categoria categoria = new Categoria();
                 string query = "SELECT * FROM dbo.Categoria WHERE id = @id;";

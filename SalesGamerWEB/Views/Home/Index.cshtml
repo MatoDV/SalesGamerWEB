@@ -172,16 +172,23 @@
                             <img src="~/img/35.png" class="card-img-top" alt="..." width:"400px" height:"400px">
                         </a>
                         <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                </li>
-                                <li class="text-muted text-right">$240.000</li>
-                            </ul>
-                            <a href="/Compra" class="h2 text-decoration-none text-dark">Logitech Aurora G713</a>
-                            <p class="card-text">
-                                El teclado Logitech G713 Aurora ofrece estilo y rendimiento excepcionales para jugadores.
-                                Con retroiluminación RGB y interruptores mecánicos, proporciona una experiencia de juego única y precisa.
-                            </p>
+                            @if (Model != null)
+                            {
+                                var producto = Model.FirstOrDefault(p => p.Id == 35);
+                                if (producto != null)
+                                {
+                                    <a href="/Compra" class="h2 text-decoration-none text-dark">@producto.Nombre_producto</a>
+                                    <li class="text-muted text-right">@producto.Precio.ToString("C")</li>
+                                    <p class="card-text">
+                                        El teclado Logitech G713 Aurora ofrece estilo y rendimiento excepcionales para jugadores.
+                                        Con retroiluminación RGB y interruptores mecánicos, proporciona una experiencia de juego única y precisa.
+                                    </p>
+                                }
+                            }
+                            else
+                            {
+                                <p>No se encontraron productos.</p>
+                            }   
                         </div>
                     </div>
                 </div>
@@ -191,16 +198,23 @@
                             <img src="~/img/32.png" class="card-img-top" alt="..." width:"400px" height:"400px">
                         </a>
                         <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li> 
-                                </li>
-                                <li class="text-muted text-right">$133.000</li>
-                            </ul>
-                            <a href="/Compra" class="h2 text-decoration-none text-dark">Logitech G PRO</a>
-                            <p class="card-text">
-                                El mouse Logitech G Pro ofrece rendimiento profesional en un diseño ligero y ambidiestro.
-                                Con sensor HERO de hasta 16,000 DPI y seis botones programables, es ideal para juegos rápidos y precisos.
-                            </p>
+                            @if (Model != null)
+                            {
+                                var producto = Model.FirstOrDefault(p => p.Id == 32);
+                                if (producto != null)
+                                {
+                                    <a href="/Compra" class="h2 text-decoration-none text-dark">@producto.Nombre_producto</a>
+                                    <li class="text-muted text-right">@producto.Precio.ToString("C")</li>
+                                    <p class="card-text">
+                                        El mouse Logitech G Pro ofrece rendimiento profesional en un diseño ligero y ambidiestro.
+                                        Con sensor HERO de hasta 16,000 DPI y seis botones programables, es ideal para juegos rápidos y precisos.
+                                    </p>
+                                }
+                            }
+                            else
+                            {
+                                <p>No se encontraron productos.</p>
+                            }           
                         </div>
                     </div>
                 </div>
@@ -210,17 +224,24 @@
                             <img src="~/img/36.png" class="card-img-top" alt="..." width:"400px" height:"400px">
                         </a>
                         <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>   
-                                </li>
-                                <li class="text-muted text-right">$98.000</li>
-                            </ul>
-                            <a href="/Compra" class="h2 text-decoration-none text-dark">Logitech G435</a>
-                            <p class="card-text">
-                                Los auriculares Logitech G435 ofrecen sonido envolvente y de alta calidad en un diseño ligero y colorido. 
-                                Con micrófono integrado, comodidad duradera y compatibilidad multiplataforma, 
-                                son ideales para juegos, música y llamadas.
-                            </p>
+                            @if (Model != null)
+                            {
+                                var producto = Model.FirstOrDefault(p => p.Id == 36);
+                                if (producto != null)
+                                {
+                                    <a href="/Compra" class="h2 text-decoration-none text-dark">@producto.Nombre_producto</a>
+                                    <li class="text-muted text-right">@producto.Precio.ToString("C")</li>
+                                    <p class="card-text">
+                                        Los auriculares Logitech G435 ofrecen sonido envolvente y de alta calidad en un diseño ligero y colorido.
+                                        Con micrófono integrado, comodidad duradera y compatibilidad multiplataforma,
+                                        son ideales para juegos, música y llamadas.
+                                    </p>
+                                }
+                            }
+                            else
+                            {
+                                <p>No se encontraron productos.</p>
+                            }                          
                         </div>
                     </div>
                 </div>

@@ -1,17 +1,14 @@
 ﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @using Microsoft.AspNetCore.Http
-@model List<Producto>
+@model List<SalesGamerWEB.Models.Producto>
 @{
-    Layout = "Producto_Layout"; // Establecer el layout a utilizar
-    int productosPorPagina = 9; // Número de productos por página
+    Layout = "Producto_Layout";
     var request = HttpContextAccessor.HttpContext.Request;
-    int paginaActual = request.Query["pagina"].ToString() != "" ? Convert.ToInt32(request.Query["pagina"]) : 1; // Obtiene el número de página actual de la consulta
-    int totalProductos = 43; // Total de productos
-    int totalPaginas = (int)Math.Ceiling((double)totalProductos / productosPorPagina); // Calcula el número total de páginas
-    int indiceInicial = (paginaActual - 1) * productosPorPagina; // Calcula el índice inicial para cargar los productos
+    int paginaActual = ViewBag.PaginaActual;
+    int totalPaginas = ViewBag.TotalPaginas;
+    string categoriaEscapada = string.IsNullOrEmpty(ViewBag.Categoria) ? "" : Uri.EscapeDataString(ViewBag.Categoria);
 }
 <body>
-
 
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -19,7 +16,7 @@
             <div class="w-100 pt-1 mb-5 text-right">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+            <form action="/Producto" method="get" class="modal-content modal-body border-0 p-0">
                 <div class="input-group mb-2">
                     <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
                     <button type="submit" class="input-group-text bg-success text-light">
@@ -30,93 +27,22 @@
         </div>
     </div>
 
-
-
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
-
             <div class="col-lg-3">
                 <h1 class="h2 pb-4">Categorias</h1>
                 <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Placas de video
-                           
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Procesador
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Memoria Ram
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Placa Madre
-                            
-                        </a>
-                    </li><li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Fuente
-                            
-                        </a>
-                    </li><li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Disco Rigido
-                            
-                        </a>
-                    </li><li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Disco Solido
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Mouse
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Teclado
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Monitor
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Auricular
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Microfono
-                            
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Gabinete
-                            
-                        </a>
-                    </li>
+                    @foreach (var categoria in ViewBag.Categorias)
+                    {
+                        <li class="pb-3">
+                            <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="/Producto?categoria=@Uri.EscapeDataString(categoria.Nombre_categoria)">
+                                @categoria.Nombre_categoria
+                            </a>
+                        </li>
+                    }
                 </ul>
             </div>
-
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-md-6">
@@ -127,14 +53,13 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="row">
-                    @foreach (var producto in Model.Skip(indiceInicial).Take(productosPorPagina)) // Itera sobre los productos de la página actual
+                    @foreach (var producto in Model)
                     {
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid" src="~/img/@(producto.Id).png" style="width: 400px; height: 300px;"> <!-- Cambia dinámicamente el src de la imagen -->
+                                    <img class="card-img rounded-0 img-fluid" src="~/img/@(producto.Id).png" style="width: 400px; height: 300px;">
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white mt-2" href="/Compra"><i class="far fa-eye"></i></a></li>
@@ -143,60 +68,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    @if (Model != null)
-                                    {
-                                        <a href="/Compra" class="h3 text-decoration-none">@producto.Nombre_producto</a>
-                                    }
-                                    else
-                                    {
-                                        <p>No se encontró ningún producto.</p>
-                                    }
-
-                                    <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-
-                                        <li class="pt-2">
-                                            <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                            <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                            <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                            <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                            <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                        </li>
-                                    </ul>
-                                    <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                        <li>
-                                        </li>
-                                    </ul>
-                                    @if (Model != null)
-                                    {
-                                        <p>$@producto.Precio</p>
-                                    }
-                                    else
-                                    {
-                                        <p>No se encontraron productos.</p>
-                                    }
+                                    <a href="/Compra" class="h3 text-decoration-none">@producto.Nombre_producto</a>
+                                    <p>@producto.Precio.ToString("C")</p>
                                 </div>
                             </div>
                         </div>
                     }
                 </div>
-
                 <div class="row">
                     <ul class="pagination pagination-lg justify-content-end">
-                        @for (int i = 1; i <= totalPaginas; i++) // Genera enlaces de paginación para cada página
+                        @for (int i = 1; i <= totalPaginas; i++)
                         {
                             <li class="page-item @(i == paginaActual ? "disabled" : "")">
-                                <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 @(i == paginaActual ? "active" : "text-dark")" href="?pagina=@i">@i</a>
+                                <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 @(i == paginaActual ? "active" : "text-dark")" href="?categoria=@categoriaEscapada&pagina=@i">@i</a>
                             </li>
                         }
                     </ul>
                 </div>
-
             </div>
-
         </div>
     </div>
     <!-- End Content -->
-
     <!-- Start Brands -->
     <section class="bg-light py-5">
         <div class="container my-4">
@@ -204,7 +96,7 @@
                 <div class="col-lg-6 m-auto">
                     <h1 class="h1">Nuestras marcas</h1>
                 </div>
-                <div class="col-lg-9 m-auto tempaltemo-carousel">   
+                <div class="col-lg-9 m-auto tempaltemo-carousel">
                     <div class="row d-flex flex-row">
                         <!--Controls-->
                         <div class="col-1 align-self-center">
@@ -213,7 +105,6 @@
                             </a>
                         </div>
                         <!--End Controls-->
-
                         <!--Carousel Wrapper-->
                         <div class="col">
                             <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
@@ -238,7 +129,6 @@
                                         </div>
                                     </div>
                                     <!--End First slide-->
-
                                     <!--Second slide-->
                                     <div class="carousel-item">
                                         <div class="row">
@@ -262,7 +152,6 @@
                             </div>
                         </div>
                         <!--End Carousel Wrapper-->
-
                         <!--Controls-->
                         <div class="col-1 align-self-center">
                             <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
