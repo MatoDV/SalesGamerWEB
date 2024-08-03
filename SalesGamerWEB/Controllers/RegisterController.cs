@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SalesGamerWEB.Models;
-using System;
 
 namespace SalesGamerWEB.Controllers
 {
@@ -15,14 +14,22 @@ namespace SalesGamerWEB.Controllers
 
         // POST: /Register/Create
         [HttpPost]
-        public IActionResult Create(Usuario usr)
+        public IActionResult Create(Usuario usr, string passConfirm)
         {
+            // Verificar que el modelo es válido
             if (ModelState.IsValid)
             {
+                // Validar que las contraseñas coincidan
+                if (usr.Contraseña != passConfirm)
+                {
+                    ModelState.AddModelError(string.Empty, "Las contraseñas no coinciden.");
+                    return View("Index", usr);
+                }
+
                 try
                 {
                     // Intentar crear el usuario
-                    bool created = Usuario_Controller.crearUsuario(usr);
+                    bool created = Usuario_Controller.CrearUsuario(usr);
                     if (created)
                     {
                         // Redirigir a la página de inicio de sesión o a otra página de destino
@@ -38,7 +45,8 @@ namespace SalesGamerWEB.Controllers
                     ModelState.AddModelError(string.Empty, "Error: " + ex.Message);
                 }
             }
-            // Si hay errores de validación, volver a mostrar el formulario con los mensajes de error
+
+            // Mostrar errores de validación si existen
             return View("Index", usr);
         }
     }

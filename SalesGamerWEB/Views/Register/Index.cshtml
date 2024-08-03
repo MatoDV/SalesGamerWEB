@@ -1,66 +1,60 @@
-﻿@model SalesGamerWEB.Models.Usuario
-
-@{
-    Layout = "Login_Layout"; // Establecer el layout a utilizar
+﻿@{
+    Layout = "Login_Layout";
 }
 
-<body>
-    <div class="login">
-        <div class="form">
-            <h2>Register</h2>
-            <form asp-controller="Register" asp-action="Create" method="post">
-                <!-- Campo de usuario -->
-                <div class="form-group">
-                    <label for="usuario">Nombre de Usuario:</label>
-                    <input type="text" class="form-control" id="usuario" name="usuario" value="@Model.usuario">
-                    <!-- Mensaje de error de validación para el campo de usuario -->
-                    @Html.ValidationMessageFor(model => model.usuario, "", new { @class = "text-danger" })
+@model SalesGamerWEB.Models.Usuario
+
+<body style="background-color: #666666;">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                @using (Html.BeginForm("Create", "Register", FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <span class="login100-form-title p-b-43">
+                        Registrate
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="El mail tiene que ser valido: ex@abc.xyz">
+                        @Html.TextBoxFor(m => m.Mail, new { @class = "input100", type = "text" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Email</span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="El usuario es necesario">
+                        @Html.TextBoxFor(m => m.usuario, new { @class = "input100", type = "text" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Usuario</span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="La contraseña es necesaria">
+                        @Html.PasswordFor(m => m.Contraseña, new { @class = "input100" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Contraseña</span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="La contraseña es necesaria">
+                        <input class="input100" type="password" name="passConfirm" />
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Repetir contraseña</span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
+                            Registrarse
+                        </button>
+                    </div>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div style="color:red;">
+                            @ViewBag.Error
+                        </div>
+                    }
+                }
+
+                <div class="login100-more" style="background-image:url('@Url.Content("~/img/fondoRegister.jpg")')">
                 </div>
-                <!-- Campo de email -->
-                <div class="form-group">
-                    <label for="mail">Email:</label>
-                    <input type="email" class="form-control" id="mail" name="Mail" value="@Model.Mail">
-                    <!-- Mensaje de error de validación para el campo de email -->
-                    @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" })
-                </div>
-                <!-- Campo de contraseña -->
-                <div class="form-group">
-                    <label for="contraseña">Contraseña:</label>
-                    <input type="password" class="form-control" id="contraseña" name="Contraseña" value="@Model.Contraseña">
-                    <!-- Mensaje de error de validación para el campo de contraseña -->
-                    @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
-                </div>
-                <!-- Campo de nombre -->
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="Nombre" value="@Model.Nombre">
-                    <!-- Mensaje de error de validación para el campo de nombre -->
-                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-                </div>
-                <!-- Campo de apellido -->
-                <div class="form-group">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" class="form-control" id="apellido" name="Apellido" value="@Model.Apellido">
-                    <!-- Mensaje de error de validación para el campo de apellido -->
-                    @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
-                </div>
-                <!-- Campo de teléfono -->
-                <div class="form-group">
-                    <label for="telefono">Telefono:</label>
-                    <input type="text" class="form-control" id="telefono" name="Telefono" value="@Model.Telefono">
-                    <!-- Mensaje de error de validación para el campo de teléfono -->
-                    @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
-                </div>
-                <!-- Campo de dirección -->
-                <div class="form-group">
-                    <label for="direccion">Direccion:</label>
-                    <input type="text" class="form-control" id="direccion" name="Direccion" value="@Model.Direccion">
-                    <!-- Mensaje de error de validación para el campo de dirección -->
-                    @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
-                </div>
-                <!-- Botón de submit -->
-                <button type="submit" class="btn btn-primary">Register</button>
-            </form>
+            </div>
         </div>
     </div>
 </body>

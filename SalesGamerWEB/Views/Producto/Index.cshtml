@@ -62,13 +62,23 @@
                                     <img class="card-img rounded-0 img-fluid" src="~/img/@(producto.Id).png" style="width: 400px; height: 300px;">
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                         <ul class="list-unstyled">
-                                            <li><a class="btn btn-success text-white mt-2" href="/Compra"><i class="far fa-eye"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="/Compra"><i class="fas fa-cart-plus"></i></a></li>
+                                            <li>
+                                                <a class="btn btn-success text-white mt-2" href="/Compra/Details/@producto.Id">
+                                                    <i class="far fa-eye"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="btn btn-success text-white mt-2" href="/Compra">
+                                                    <i class="fas fa-cart-plus"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <a href="/Compra" class="h3 text-decoration-none">@producto.Nombre_producto</a>
+                                    <a href="/Compra/Details/@producto.Id" class="h3 text-decoration-none">
+                                        @producto.Nombre_producto
+                                    </a>
                                     <p>@producto.Precio.ToString("C")</p>
                                 </div>
                             </div>
@@ -155,7 +165,7 @@
                         <!--Controls-->
                         <div class="col-1 align-self-center">
                             <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
-                                <i class="text-light fas fa-chevron-right"></i>
+                                <i class="text-dark fas fa-chevron-right"></i>
                             </a>
                         </div>
                         <!--End Controls-->
