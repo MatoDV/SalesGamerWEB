@@ -44,6 +44,12 @@ app.UseEndpoints(endpoints =>
     );
 
     endpoints.MapControllerRoute(
+        name: "carrito",
+        pattern: "/Carrito",
+        defaults: new { controller = "Carrito", action = "Index" }
+    );
+
+    endpoints.MapControllerRoute(
         name: "register",
         pattern: "/Register",
         defaults: new { controller = "Register", action = "Index" }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5ArnyMmCXCp7SRw93gpvR7LBHQqShM5ADRDjcGSD7kw=",
+  "Hash": "x5Wvg1CJtv4+afMZvOxtRuy/SM5OWiRWQNnOLLeEFfs=",
   "Source": "SalesGamerWEB",
   "BasePath": "_content/SalesGamerWEB",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\css\\Carritocss.css",
+      "SourceId": "SalesGamerWEB",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\",
+      "BasePath": "_content/SalesGamerWEB",
+      "RelativePath": "css/Carritocss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Carritocss.css"
     },
     {
       "Identity": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\wwwroot\\css\\css-hamburgers\\hamburgers.css",

@@ -13,9 +13,28 @@ namespace SalesGamerWEB.Models
         public virtual DbSet<Categoria> Categorias { get; set; }
         public virtual DbSet<Distribuidor> Distribuidores { get; set; }
         public virtual DbSet<Oferta> Ofertas { get; set; }
+        public virtual DbSet<Carrito> Carritos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Carrito>(entity =>
+            {
+                entity.ToTable("Carrito");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.NombreProducto)
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.PrecioTotal)
+                    .HasColumnType("float");
+
+                entity.HasOne(e => e.Usuario)
+                    .WithMany()
+                    .HasForeignKey(e => e.UsuarioId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
             modelBuilder.Entity<Producto>(entity =>
             {
                 entity.ToTable("Producto");

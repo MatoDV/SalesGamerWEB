@@ -1,5 +1,4 @@
 ﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
-@using Microsoft.AspNetCore.Http
 @model List<SalesGamerWEB.Models.Producto>
 
 @{
@@ -7,8 +6,10 @@
     var request = HttpContextAccessor.HttpContext.Request;
     int paginaActual = ViewBag.PaginaActual;
     int totalPaginas = ViewBag.TotalPaginas;
-    string categoriaEscapada = string.IsNullOrEmpty(ViewBag.Categoria) ? "" : Uri.EscapeDataString(ViewBag.Categoria);
+    int? categoriaId = ViewBag.Categoria;
+    string categoriaEscapada = categoriaId.HasValue ? Uri.EscapeDataString(categoriaId.Value.ToString()) : "";
 }
+
 <body>
 
     <!-- Modal -->
@@ -37,7 +38,9 @@
                     @foreach (var categoria in ViewBag.Categorias)
                     {
                         <li class="pb-3">
-                            <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="/Producto?categoria=@Uri.EscapeDataString(categoria.Nombre_categoria)">
+                            <a class="collapsed d-flex justify-content-between h3 text-decoration-none"
+                               href="/Producto?categoria=@categoria.Id&pagina=1"
+                               data-filter="categoria">
                                 @categoria.Nombre_categoria
                             </a>
                         </li>
@@ -54,13 +57,15 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
+                <div id="productos-container" class="row">
                     @foreach (var producto in Model)
                     {
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid" src="~/img/@(producto.Id).png" style="width: 400px; height: 300px;">
+                                    <img class="card-img rounded-0 img-fluid"
+                                         src="~/img/@(producto.Id).png"
+                                         style="width: 400px; height: 300px;">
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                         <ul class="list-unstyled">
                                             <li>
@@ -88,10 +93,11 @@
                 </div>
                 <div class="row">
                     <ul class="pagination pagination-lg justify-content-end">
-                        @for (int i = 1; i <= totalPaginas; i++)
+                        @for (int i = 1; i <= ViewBag.TotalPaginas; i++)
                         {
-                            <li class="page-item @(i == paginaActual ? "disabled" : "")">
-                                <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 @(i == paginaActual ? "active" : "text-dark")" href="?categoria=@categoriaEscapada&pagina=@i">@i</a>
+                            <li class="page-item @(i == ViewBag.PaginaActual ? "disabled" : "")">
+                                <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 @(i == ViewBag.PaginaActual ? "active" : "text-dark")"
+                                   href="?categoria=@ViewBag.Categoria&pagina=@i">@i</a>
                             </li>
                         }
                     </ul>

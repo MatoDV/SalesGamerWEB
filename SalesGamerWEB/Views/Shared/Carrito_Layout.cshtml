@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Sales Gamer - Lista de Productos</title>
+    <title>SalesGamer Shop</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,22 +12,21 @@
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/templatemo.css">
     <link rel="stylesheet" href="~/css/custom.css">
+    <link rel="stylesheet" href="~/css/Carritocss.css">
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="~/css/fontawesome.min.css">
-<!--
-    
-TemplateMo 559 Zay Shop
+    <!--
 
-https://templatemo.com/tm-559-zay-shop
+    TemplateMo 559 Zay Shop
 
--->
-@RenderSection("Styles", required: false)
+    https://templatemo.com/tm-559-zay-shop
+
+    -->
+    @RenderSection("Styles", required: false)
+
 </head>
-@{
-    int counter = 0;
-}
 <body>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
@@ -44,11 +43,10 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </nav>
     <!-- Close Top Nav -->
-
-
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
+            @* icono de la pagina *@
 
             <a class="navbar-brand text-success logo h1 align-self-center" href="/Home">
                 <img src="~/img/logolocardo3.png" width="55" height="55">
@@ -81,6 +79,8 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                     </ul>
                 </div>
+                @* es el input q se abre cuando buscas *@
+
                 <div class="navbar align-self-center d-flex">
                     @* icono del carrito *@
                     <a class="nav-icon position-relative" href="/Carrito">
@@ -96,10 +96,10 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </nav>
     <!-- Close Header -->
+
     <div class="container body-content">
         @RenderBody()
     </div>
-    <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
@@ -121,27 +121,18 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                     </ul>
                 </div>
-                @* lista de categoria de productos *@            
+                @* lista de categoria de productos *@
+
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 h1footer border-bottom pb-3 border-light">Categorias</h2>
                     <ul class="list-unstyled h1footer footer-link-list">
-                        @foreach (var categoria in ViewBag.Categorias)
-                    {
-                            if (counter == 5)
-                            {
-                                break;
-                            }
-                        <li class="pb-3">
-                            <a class="h1footer"
-                               href="/Producto?categoria=@categoria.Id&pagina=1"
-                               data-filter="categoria">
-                                @categoria.Nombre_categoria
-                            </a>
-                            </li>
-                            counter++;
-                        }
+                        <li><a class=" h1footer" href="/Productos">Placa de video</a></li>
+                        <li><a class=" h1footer" href="/Productos">Procesador</a></li>
+                        <li><a class=" h1footer" href="/Productos">Memoria ram</a></li>
+                        <li><a class=" h1footer" href="/Productos">Fuente</a></li>
+                        <li><a class=" h1footer" href="/Productos">Gabinete</a></li>
                     </ul>
-                </div>  
+                </div>
                 @* info adicional *@
 
                 <div class="col-md-4 pt-5">
@@ -192,25 +183,12 @@ https://templatemo.com/tm-559-zay-shop
 
     </footer>
     <!-- End Footer -->
-
     <!-- Start Script -->
-    <script>
-        $(document).ready(function () {
-            $('a[data-filter="categoria"]').on('click', function (e) {
-                e.preventDefault();
-                var url = $(this).attr('href');
-
-                $.get(url, function (data) {
-                    $('#productos-container').html($(data).find('#productos-container').html());
-                });
-            });
-        });
-    </script>
+    <script src="~/js/jquery-1.11.0.min.js"></script>
     <script src="~/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/templatemo.js"></script>
     <script src="~/js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- End Script -->
     @RenderSection("Scripts", required: false)
 </body>

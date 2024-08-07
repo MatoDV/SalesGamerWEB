@@ -6,6 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\Shared\MetodoDePago_Layout.cshtml" />
+  </ItemGroup>
+
     <ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
@@ -13,5 +17,17 @@
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
 		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
 	</ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Shared\MetodoDePago_Layout.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Shared\MetodoDePago_Layout.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="Views\Shared\MetodoDePago_Layout.cshtml" />
+    </ItemGroup>
 
 </Project>

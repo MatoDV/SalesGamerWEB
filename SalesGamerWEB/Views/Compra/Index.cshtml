@@ -23,6 +23,9 @@
     string categoriaNombre = categoriaMap.ContainsKey(Model.Categoria_id)
         ? categoriaMap[Model.Categoria_id]
         : "Desconocida";
+
+    int? categoriaId = ViewBag.Categoria;
+    string categoriaEscapada = categoriaId.HasValue ? Uri.EscapeDataString(categoriaId.Value.ToString()) : "";
 }
 <body>
 <!-- Modal -->

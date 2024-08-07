@@ -1,5 +1,7 @@
 ﻿@{
     Layout = "Contacto_Layout"; // Establecer el layout a utilizar
+    int? categoriaId = ViewBag.Categoria;
+    string categoriaEscapada = categoriaId.HasValue ? Uri.EscapeDataString(categoriaId.Value.ToString()) : "";
 }
 <body>
 <!-- Modal -->

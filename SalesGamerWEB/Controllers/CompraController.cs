@@ -32,5 +32,17 @@ namespace SalesGamerWEB.Controllers
             return View(producto);
         }
 
+        [HttpPost]
+        public IActionResult AñadirAlCarrito(int productId, int productQuanity)
+        {
+            // Lógica para añadir el producto al carrito
+            // Aquí deberías agregar el producto al carrito del usuario
+
+            // Por ejemplo, podrías añadir la lógica para guardar el producto en una tabla de carrito en la base de datos
+
+            // Redirigir de vuelta a la página de detalles del producto o a otra página
+            return RedirectToAction("Carrito","Index", new { id = productId });
+        }
+
     }
 }

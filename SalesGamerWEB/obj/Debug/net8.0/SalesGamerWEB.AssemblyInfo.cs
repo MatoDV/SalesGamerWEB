@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SalesGamerWEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d14a8bfba3e1e99858ed4372f1b5cef5d337561")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b62de0ae3f9982c07c687d0319c655d0d0c41ebe")]
 [assembly: System.Reflection.AssemblyProductAttribute("SalesGamerWEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SalesGamerWEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

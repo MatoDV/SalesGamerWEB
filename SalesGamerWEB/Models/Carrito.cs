@@ -3,19 +3,21 @@
     public class Carrito
     {
         public int Id { get; set; }
-        public string nombre_producto { get; set; }
-        public int cantidad { get; set; }
-        public float precio_total { get; set; }
-        public Usuario Usuario_id { get; set; }
+        public string NombreProducto { get; set; }
+        public int Cantidad { get; set; }
+        public float PrecioTotal { get; set; }
+        public int UsuarioId { get; set; } // Cambiado a int para la clave foránea
+        public virtual Usuario Usuario { get; set; }
 
-        public Carrito(int id,string Nombre_prod,int Cantidad,float Precio_total,Usuario Usuario_ID)
+        public Carrito(int id, string nombreProducto, int cantidad, float precioTotal, int usuarioId)
         {
-            this.Id = id;
-            this.nombre_producto = Nombre_prod;
-            this.cantidad = Cantidad;
-            this.precio_total = Precio_total;
-            this.Usuario_id = Usuario_ID;
+            Id = id;
+            NombreProducto = nombreProducto;
+            Cantidad = cantidad;
+            PrecioTotal = precioTotal;
+            UsuarioId = usuarioId;
         }
+
         public Carrito() { }
     }
 }
