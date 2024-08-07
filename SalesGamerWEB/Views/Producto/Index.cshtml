@@ -1,6 +1,7 @@
 ﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @using Microsoft.AspNetCore.Http
 @model List<SalesGamerWEB.Models.Producto>
+
 @{
     Layout = "Producto_Layout";
     var request = HttpContextAccessor.HttpContext.Request;
@@ -31,7 +32,7 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-3">
-                <h1 class="h2 pb-4">Categorias</h1>
+                <h1 class="h2 pb-4">Categorías</h1>
                 <ul class="list-unstyled templatemo-accordion">
                     @foreach (var categoria in ViewBag.Categorias)
                     {
@@ -63,7 +64,7 @@
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                         <ul class="list-unstyled">
                                             <li>
-                                                <a class="btn btn-success text-white mt-2" href="/Compra/Details/@producto.Id">
+                                                <a class="btn btn-success text-white mt-2" href="/Compra/?id=@producto.Id">
                                                     <i class="far fa-eye"></i>
                                                 </a>
                                             </li>
@@ -76,7 +77,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <a href="/Compra/Details/@producto.Id" class="h3 text-decoration-none">
+                                    <a href="/Compra/?id=@producto.Id" class="h3 text-decoration-none">
                                         @producto.Nombre_producto
                                     </a>
                                     <p>@producto.Precio.ToString("C")</p>

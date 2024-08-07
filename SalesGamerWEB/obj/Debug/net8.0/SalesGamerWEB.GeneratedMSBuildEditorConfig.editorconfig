@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Carrito/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Compra/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Metodo_de_pago/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0b2RvX2RlX3BhZ29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/matos.MATIAS/OneDrive/Documents/GitHub/SalesGamerWEB/SalesGamerWEB/Views/Producto/Index.cshtml]

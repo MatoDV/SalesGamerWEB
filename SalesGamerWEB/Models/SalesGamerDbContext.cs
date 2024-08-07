@@ -11,44 +11,74 @@ namespace SalesGamerWEB.Models
 
         public virtual DbSet<Producto> Productos { get; set; }
         public virtual DbSet<Categoria> Categorias { get; set; }
-        // Agrega otros DbSet según sea necesario para tu aplicación
+        public virtual DbSet<Distribuidor> Distribuidores { get; set; }
+        public virtual DbSet<Oferta> Ofertas { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Producto>(entity =>
             {
-                entity.ToTable("Producto"); // Nombre de la tabla en la base de datos
+                entity.ToTable("Producto");
 
-                entity.HasKey(e => e.Id); // Definir la clave primaria
+                entity.HasKey(e => e.Id);
 
                 entity.Property(e => e.Nombre_producto)
-                    .HasMaxLength(50); // Definir la longitud máxima de la columna Nombre_producto
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Descripcion)
-                    .HasMaxLength(100); // Definir la longitud máxima de la columna Descripcion
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Precio)
-                    .HasColumnType("int"); // Definir el tipo de dato y precisión para la columna Precio
+                    .HasColumnType("int");
 
                 entity.Property(e => e.Cantidad)
-                    .HasColumnType("int"); // Definir el tipo de dato para la columna Cantidad
-
-                entity.Property(e => e.img)
-                    .HasColumnType("varbinary(max)"); // Definir el tipo de dato para la columna img
+                    .HasColumnType("int");
 
                 // Relaciones con otras entidades
-                entity.HasOne(e => e.Distribuidor_id)
+                entity.HasOne(e => e.Distribuidor)
                     .WithMany()
-                    .HasForeignKey(e => e.Distribuidor_id); // Relación con la entidad Distribuidor
+                    .HasForeignKey(e => e.Distribuidor_id)
+                    .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(e => e.Oferta_id)
+                entity.HasOne(e => e.Oferta)
                     .WithMany()
-                    .HasForeignKey(e => e.Oferta_id); // Relación con la entidad Oferta
+                    .HasForeignKey(e => e.Oferta_id)
+                    .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(e => e.Categoria_id)
+                entity.HasOne(e => e.Categoria)
                     .WithMany()
-                    .HasForeignKey(e => e.Categoria_id); // Relación con la entidad Categoria
+                    .HasForeignKey(e => e.Categoria_id)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<Distribuidor>(entity =>
+            {
+                entity.ToTable("Distribuidor");
+
+                entity.HasKey(e => e.Id);
+
+                // Configura las propiedades y relaciones aquí
+            });
+
+            modelBuilder.Entity<Oferta>(entity =>
+            {
+                entity.ToTable("Oferta");
+
+                entity.HasKey(e => e.Id);
+
+                // Configura las propiedades y relaciones aquí
+            });
+
+            modelBuilder.Entity<Categoria>(entity =>
+            {
+                entity.ToTable("Categoria");
+
+                entity.HasKey(e => e.Id);
+
+                // Configura las propiedades y relaciones aquí
             });
         }
+
 
     }
 }

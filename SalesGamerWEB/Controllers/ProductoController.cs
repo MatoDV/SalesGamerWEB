@@ -276,94 +276,99 @@ namespace SalesGamerWEB.Controllers
 
         //OBTENER PRODUCTO POR ID
         public static Producto ObtenerProductoID(int id)
-            {
-                Producto producto = new Producto();
-                string query = "SELECT * FROM dbo.Producto WHERE id = @id;";
-                using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
-                {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    try
-                    {
-                        DB_Controller.connection.Open();
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            int distribuidorId = reader.GetInt32(5);
-                            Distribuidor distribuidor = ObtenerDistribuidorId(distribuidorId);
-                            int ofertaId = reader.GetInt32(6);
-                            Oferta oferta = ObtenerOfertaId(ofertaId);
-                            int categoriaId = reader.GetInt32(7);
-                            Categoria categoria = ObtenerCategoriaId(categoriaId);
+        {
+            Producto producto = null;
+            string query = "SELECT * FROM dbo.Producto WHERE id = @id;";
 
-                        producto = new Producto
-                            {
-                                Id = reader.GetInt32(0),
-                                Nombre_producto = reader.GetString(1),
-                                Descripcion = reader.GetString(2),
-                                Precio = reader.GetInt32(3),
-                                Cantidad = reader.GetInt32(4),
-                                Distribuidor_id = distribuidor,
-                                Oferta_id = oferta,
-                                img = (byte[])reader["img"],
-                                Categoria_id = categoria
-                            };
-                        }
-                        reader.Close();
-                    }
-                    finally
-                    {
-                        DB_Controller.connection.Close();
-                    }
-                }
-                return producto;
-            }
-
-            //CREAR PRODUCTO
-            public static bool CrearProducto(Producto producto)
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
             {
-                string query = "INSERT INTO dbo.Producto (id,nombre_producto, descripcion, precio, cantidad, Distribuidor_id, Oferta_id, imagen, Categoria_id) " +
-                               "VALUES (@id,@nombre, @descripcion, @precio, @cantidad, @distribuidorId, @ofertaId, @imagen, @categoriaId);";
-                using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
-                {
-                    cmd.Parameters.AddWithValue("@id", obtenerMaxId() + 1);
-                    cmd.Parameters.AddWithValue("@nombre", producto.Nombre_producto);
-                    cmd.Parameters.AddWithValue("@descripcion", producto.Descripcion);
-                    cmd.Parameters.AddWithValue("@precio", producto.Precio);
-                    cmd.Parameters.AddWithValue("@cantidad", producto.Cantidad);
-                    cmd.Parameters.AddWithValue("@distribuidorId", producto.Distribuidor_id);
-                    cmd.Parameters.AddWithValue("@ofertaId", producto.Oferta_id);
-                    cmd.Parameters.AddWithValue("@imagen", producto.img);
-                    cmd.Parameters.AddWithValue("@categoriaId", producto.Categoria_id);
+                cmd.Parameters.AddWithValue("@id", id);
+
                 try
                 {
-                        DB_Controller.connection.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    finally
+                    DB_Controller.connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
                     {
-                        DB_Controller.connection.Close();
+                        producto = new Producto
+                        {
+                            Id = reader.GetInt32(0),
+                            Nombre_producto = reader.GetString(1),
+                            Descripcion = reader.GetString(2),
+                            Precio = reader.GetInt32(3),
+                            Cantidad = reader.GetInt32(4),
+                            Distribuidor_id = reader.GetInt32(5),
+                            Oferta_id = reader.GetInt32(6),
+                            Categoria_id = reader.GetInt32(7)
+                        };
+
+                        // Puedes cargar las entidades relacionadas aquí si es necesario
+                        producto.Distribuidor = ObtenerDistribuidorId(producto.Distribuidor_id);
+                        producto.Oferta = ObtenerOfertaId(producto.Oferta_id);
+                        producto.Categoria = ObtenerCategoriaId(producto.Categoria_id);
                     }
+
+                    reader.Close();
+                }
+                finally
+                {
+                    DB_Controller.connection.Close();
                 }
             }
 
-            // EDITAR / CREAR PRODUCTO
+            return producto;
+        }
 
-            public static bool editarProducto(Producto prod)
+
+
+        //CREAR PRODUCTO
+        public static bool CrearProducto(Producto producto)
+        {
+            string query = "INSERT INTO dbo.Producto (id, nombre_producto, descripcion, precio, cantidad, Distribuidor_id, Oferta_id, Categoria_id) " +
+                           "VALUES (@id, @nombre, @descripcion, @precio, @cantidad, @distribuidorId, @ofertaId, @categoriaId);";
+
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
             {
-                //Darlo de alta en la BBDD
+                cmd.Parameters.AddWithValue("@id", obtenerMaxId() + 1);
+                cmd.Parameters.AddWithValue("@nombre", producto.Nombre_producto);
+                cmd.Parameters.AddWithValue("@descripcion", producto.Descripcion);
+                cmd.Parameters.AddWithValue("@precio", producto.Precio);
+                cmd.Parameters.AddWithValue("@cantidad", producto.Cantidad);
+                cmd.Parameters.AddWithValue("@distribuidorId", producto.Distribuidor_id);
+                cmd.Parameters.AddWithValue("@ofertaId", producto.Oferta_id);
+                cmd.Parameters.AddWithValue("@categoriaId", producto.Categoria_id);
 
-                string query = "update dbo.Producto set nombre_producto = @nombre_producto , " +
-                    "descripcion = @descripcion , " +
-                    "precio = @precio , " +
-                    "cantidad = @cantidad ," +
-                    "Distribuidor_id = @Distribuidor_id ," +
-                    "Oferta_id = @Oferta_id ," +
-                    "imagen = @imagen ," +
-                    "Categoria_id = @Categoria_id " +
-                    "where id = @id ;";
+                try
+                {
+                    DB_Controller.connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                finally
+                {
+                    DB_Controller.connection.Close();
+                }
+            }
+        }
 
-            SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
+
+
+        // EDITAR / CREAR PRODUCTO
+
+        public static bool EditarProducto(Producto prod)
+        {
+            string query = "UPDATE dbo.Producto SET nombre_producto = @nombre_producto, " +
+                           "descripcion = @descripcion, " +
+                           "precio = @precio, " +
+                           "cantidad = @cantidad, " +
+                           "Distribuidor_id = @Distribuidor_id, " +
+                           "Oferta_id = @Oferta_id, " +
+                           "Categoria_id = @Categoria_id " +
+                           "WHERE id = @id;";
+
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
+            {
                 cmd.Parameters.AddWithValue("@id", prod.Id);
                 cmd.Parameters.AddWithValue("@nombre_producto", prod.Nombre_producto);
                 cmd.Parameters.AddWithValue("@descripcion", prod.Descripcion);
@@ -371,24 +376,28 @@ namespace SalesGamerWEB.Controllers
                 cmd.Parameters.AddWithValue("@cantidad", prod.Cantidad);
                 cmd.Parameters.AddWithValue("@Distribuidor_id", prod.Distribuidor_id);
                 cmd.Parameters.AddWithValue("@Oferta_id", prod.Oferta_id);
-                cmd.Parameters.AddWithValue("@imagen", prod.img);
                 cmd.Parameters.AddWithValue("@Categoria_id", prod.Categoria_id);
 
-            try
-            {
+                try
+                {
                     DB_Controller.connection.Open();
                     cmd.ExecuteNonQuery();
-                    DB_Controller.connection.Close();
                     return true;
                 }
                 catch (Exception ex)
                 {
                     throw new Exception("Hay un error en la query: " + ex.Message);
                 }
-
+                finally
+                {
+                    DB_Controller.connection.Close();
+                }
             }
+        }
 
-            public static bool eliminarProducto(Producto prodEliminar)
+
+
+        public static bool eliminarProducto(Producto prodEliminar)
             {
                 string query = "DELETE FROM dbo.Producto WHERE id = @id;";
 

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SalesGamerWEB.Models;
+using System.Linq;
 
 namespace SalesGamerWEB.Controllers
 {
@@ -12,20 +14,23 @@ namespace SalesGamerWEB.Controllers
             _context = context;
         }
 
-        // GET: /Compra/Details/5
-        public IActionResult Details(int id)
+        // GET: /Compra
+        public IActionResult Index(int id)
         {
-            var producto = _context.Productos.FirstOrDefault(p => p.Id == id);
+            var producto = _context.Productos
+                .Include(p => p.Distribuidor)
+                .Include(p => p.Oferta)
+                .Include(p => p.Categoria)
+                .FirstOrDefault(p => p.Id == id);
+
             if (producto == null)
             {
                 return NotFound();
             }
 
+            // Pasar el producto a la vista
             return View(producto);
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+
     }
 }
