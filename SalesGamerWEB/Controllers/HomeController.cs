@@ -25,13 +25,13 @@ namespace SalesGamerWEB.Controllers
             List<Producto> list = new List<Producto>();
             string query = "SELECT * FROM dbo.Producto;";
 
-            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.Connection))
             {
                 try
                 {
-                    if (DB_Controller.connection.State != System.Data.ConnectionState.Open)
+                    if (DB_Controller.Connection.State != System.Data.ConnectionState.Open)
                     {
-                        DB_Controller.connection.Open();
+                        DB_Controller.Connection.Open();
                     }
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -57,9 +57,9 @@ namespace SalesGamerWEB.Controllers
                 }
                 finally
                 {
-                    if (DB_Controller.connection.State == System.Data.ConnectionState.Open)
+                    if (DB_Controller.Connection.State == System.Data.ConnectionState.Open)
                     {
-                        DB_Controller.connection.Close();
+                        DB_Controller.Connection.Close();
                     }
                 }
             }

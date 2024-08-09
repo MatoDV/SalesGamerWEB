@@ -1,27 +1,45 @@
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using SalesGamerWEB.Controllers;
 using SalesGamerWEB.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Inicializar la base de datos
+DB_Controller.Initialize(builder.Configuration);
+
+// Configurar servicios de correo electrónico
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddTransient<IEmailSender, EmailSender>(); // Registramos EmailSender como IEmailSender
+
+// Configurar DbContext e Identity
 builder.Services.AddDbContext<SalesGamerDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure the database connection
-builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
-DB_Controller.Initialize(builder.Configuration);
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = false;
+})
+.AddEntityFrameworkStores<SalesGamerDbContext>()
+.AddDefaultTokenProviders();
+
+// Configurar autenticación y cookies
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Login";
+        options.AccessDeniedPath = "/AccessDenied";
+    });
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
-// Register IHttpContextAccessor
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
-// Configure the HTTP request pipeline.
+
+// Configurar el pipeline de solicitudes HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -33,10 +51,13 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // Asegúrate de que esto esté antes de UseAuthorization
 app.UseAuthorization();
 
+// Configurar las rutas
 app.UseEndpoints(endpoints =>
 {
+    // Rutas para las páginas de inicio de sesión, registro y carrito
     endpoints.MapControllerRoute(
         name: "login",
         pattern: "/Login",
@@ -55,11 +76,13 @@ app.UseEndpoints(endpoints =>
         defaults: new { controller = "Register", action = "Index" }
     );
 
+    // Ruta por defecto
     endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}"
     );
 
+    // Otras rutas específicas
     endpoints.MapControllerRoute(
         name: "productos",
         pattern: "/Productos",
@@ -83,6 +106,20 @@ app.UseEndpoints(endpoints =>
         pattern: "/Compra",
         defaults: new { controller = "Compra", action = "Index" }
     );
+
+    endpoints.MapRazorPages();
+});
+
+// Redireccionar al login si el usuario no está autenticado al intentar acceder al carrito
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.StartsWithSegments("/Carrito") && !context.User.Identity.IsAuthenticated)
+    {
+        context.Response.Redirect("/Login");
+        return;
+    }
+
+    await next.Invoke();
 });
 
 app.Run();

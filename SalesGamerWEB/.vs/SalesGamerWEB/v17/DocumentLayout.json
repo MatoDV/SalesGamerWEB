@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos.matias\\onedrive\\documents\\github\\salesgamerweb\\salesgamerweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|c:\\users\\matos.matias\\onedrive\\documents\\github\\salesgamerweb\\salesgamerweb\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A3F90D7-EB00-40BC-A5FE-E53EFD3E7B22}|SalesGamerWEB.csproj|solutionrelative:controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFYAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T19:22:28.271Z",
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RegisterController.cs",
+              "ToolTip": "C:\\Users\\matos.MATIAS\\OneDrive\\Documents\\GitHub\\SalesGamerWEB\\SalesGamerWEB\\Controllers\\RegisterController.cs",
+              "RelativeToolTip": "Controllers\\RegisterController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T12:50:33.754Z",
               "EditorCaption": ""
             }
           ]

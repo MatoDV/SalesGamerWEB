@@ -13,11 +13,11 @@ namespace SalesGamerWEB.Controllers
             List<Oferta> list = new List<Oferta>();
             string query = "SELECT * FROM dbo.Oferta;";
 
-            SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
+            SqlCommand cmd = new SqlCommand(query, DB_Controller.Connection);
 
             try
             {
-                DB_Controller.connection.Open();
+                DB_Controller.Connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -43,7 +43,7 @@ namespace SalesGamerWEB.Controllers
                 }
 
                 reader.Close();
-                DB_Controller.connection.Close();
+                DB_Controller.Connection.Close();
             }
             catch (Exception ex)
             {
@@ -59,11 +59,11 @@ namespace SalesGamerWEB.Controllers
             int MaxId = 0;
             string query = "select max(id) from dbo.Oferta;";
 
-            SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
+            SqlCommand cmd = new SqlCommand(query, DB_Controller.Connection);
 
             try
             {
-                DB_Controller.connection.Open();
+                DB_Controller.Connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -72,7 +72,7 @@ namespace SalesGamerWEB.Controllers
                 }
 
                 reader.Close();
-                DB_Controller.connection.Close();
+                DB_Controller.Connection.Close();
                 return MaxId;
             }
             catch (Exception ex)
@@ -86,12 +86,12 @@ namespace SalesGamerWEB.Controllers
         {
             Oferta ofer = new Oferta();
             string query = "SELECT * FROM dbo.Oferta WHERE id = @id;";
-            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.Connection))
             {
                 cmd.Parameters.AddWithValue("@id", id);
                 try
                 {
-                    DB_Controller.connection.Open();
+                    DB_Controller.Connection.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
@@ -116,7 +116,7 @@ namespace SalesGamerWEB.Controllers
                 }
                 finally
                 {
-                    DB_Controller.connection.Close();
+                    DB_Controller.Connection.Close();
                 }
             }
             return ofer;
@@ -127,7 +127,7 @@ namespace SalesGamerWEB.Controllers
         {
             string query = "INSERT INTO dbo.Oferta (id,nombre,tipo_oferta,fecha_inicio,fecha_final,condiciones) " +
                            "VALUES (@id,@nombre,@tipo_oferta,@fecha_inicio,@fecha_final,@condiciones);";
-            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.Connection))
             {
                 cmd.Parameters.AddWithValue("@id", obtenerMaxId() + 1);
                 cmd.Parameters.AddWithValue("@nombre", ofert.Nombre);
@@ -138,13 +138,13 @@ namespace SalesGamerWEB.Controllers
 
                 try
                 {
-                    DB_Controller.connection.Open();
+                    DB_Controller.Connection.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     return rowsAffected > 0;
                 }
                 finally
                 {
-                    DB_Controller.connection.Close();
+                    DB_Controller.Connection.Close();
                 }
             }
         }
@@ -162,7 +162,7 @@ namespace SalesGamerWEB.Controllers
                 "condiciones = @condiciones, " +
                 "where id = @id ;";
 
-            SqlCommand cmd = new SqlCommand(query, DB_Controller.connection);
+            SqlCommand cmd = new SqlCommand(query, DB_Controller.Connection);
             cmd.Parameters.AddWithValue("@id", ofer.Id);
             cmd.Parameters.AddWithValue("@nombre", ofer.Nombre);
             cmd.Parameters.AddWithValue("@tipo_oferta", ofer.Tipo_oferta);
@@ -173,9 +173,9 @@ namespace SalesGamerWEB.Controllers
 
             try
             {
-                DB_Controller.connection.Open();
+                DB_Controller.Connection.Open();
                 cmd.ExecuteNonQuery();
-                DB_Controller.connection.Close();
+                DB_Controller.Connection.Close();
                 return true;
             }
             catch (Exception ex)
@@ -190,15 +190,15 @@ namespace SalesGamerWEB.Controllers
         {
             string query = "DELETE FROM dbo.Oferta WHERE id = @id;";
 
-            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.connection))
+            using (SqlCommand cmd = new SqlCommand(query, DB_Controller.Connection))
             {
                 cmd.Parameters.AddWithValue("@id", oferEliminar.Id);
 
                 try
                 {
-                    DB_Controller.connection.Open();
+                    DB_Controller.Connection.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
-                    DB_Controller.connection.Close();
+                    DB_Controller.Connection.Close();
 
                     return rowsAffected > 0;
                 }

@@ -8,35 +8,50 @@ namespace SalesGamerWEB.Controllers
 {
     public static class DB_Controller
     {
-        private static IConfiguration _configuration; // Agrega este campo
-        public static string connectionString; // Agrega esta propiedad
-        public static SqlConnection connection; // Mantén esta propiedad
+        private static IConfiguration _configuration;
+        public static string _connectionString;
+        private static SqlConnection _connection;
 
-        // Método para inicializar la conexión
-        public static void Initialize(IConfiguration configuration) // Modifica el método para recibir IConfiguration como parámetro
+        public static SqlConnection Connection
         {
-            _configuration = configuration; // Asigna IConfiguration al campo _configuration
+            get
+            {
+                if (_connection == null)
+                {
+                    throw new InvalidOperationException("La conexión a la base de datos no ha sido inicializada. Llame a DB_Controller.Initialize antes de usarla.");
+                }
+                return _connection;
+            }
+        }
+
+        public static void Initialize(IConfiguration configuration)
+        {
+            _configuration = configuration;
 
             try
             {
-                connectionString = _configuration.GetConnectionString("DefaultConnection");
-                connection = new SqlConnection(connectionString);
+                _connectionString = _configuration.GetConnectionString("DefaultConnection");
+                if (string.IsNullOrEmpty(_connectionString))
+                {
+                    throw new InvalidOperationException("La cadena de conexión no está configurada.");
+                }
 
-                connection.Open();
+                _connection = new SqlConnection(_connectionString);
+                _connection.Open();
                 Debug.WriteLine("Conexión establecida correctamente.");
-
-                // No cerrar la conexión aquí
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine("Error al establecer la conexión: " + ex.Message);
+                throw; // Re-throw the exception to ensure it's handled properly
             }
         }
+
         public static void CloseConnection()
         {
-            if (connection != null && connection.State == ConnectionState.Open)
+            if (_connection != null && _connection.State == ConnectionState.Open)
             {
-                connection.Close();
+                _connection.Close();
                 Debug.WriteLine("Conexión cerrada correctamente.");
             }
         }

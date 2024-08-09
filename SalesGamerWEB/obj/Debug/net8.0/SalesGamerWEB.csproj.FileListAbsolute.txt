@@ -11,6 +11,7 @@ C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
@@ -61,6 +62,7 @@ C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.AssemblyInfoInputs.cache
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.AssemblyInfo.cs
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.csproj.CoreCompileInputs.cache
+C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.RazorAssemblyInfo.cache
 C:\Users\matos.MATIAS\OneDrive\Documents\GitHub\SalesGamerWEB\SalesGamerWEB\obj\Debug\net8.0\SalesGamerWEB.RazorAssemblyInfo.cs

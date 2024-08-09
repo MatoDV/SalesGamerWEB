@@ -23,8 +23,11 @@ namespace SalesGamerWEB.Models
 
                 entity.HasKey(e => e.Id);
 
-                entity.Property(e => e.NombreProducto)
-                    .HasMaxLength(100);
+                entity.Property(e => e.nombre_producto)
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Cantidad)
+                    .HasColumnType("int");
 
                 entity.Property(e => e.PrecioTotal)
                     .HasColumnType("float");
@@ -33,6 +36,16 @@ namespace SalesGamerWEB.Models
                     .WithMany()
                     .HasForeignKey(e => e.UsuarioId)
                     .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(e => e.Oferta) // Nueva relación con Producto
+                    .WithMany()
+                    .HasForeignKey(e => e.OfertaId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(e => e.Producto) // Nueva relación con Producto
+                    .WithMany()
+                    .HasForeignKey(e => e.ProductoId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<Producto>(entity =>

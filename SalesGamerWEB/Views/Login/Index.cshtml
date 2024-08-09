@@ -1,56 +1,51 @@
 ﻿@{
-	Layout = "Login_Layout";
+    Layout = "Login_Layout";
 }
 
 @model SalesGamerWEB.Models.Usuario
 
 <body style="background-color: #666666;">
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				@using (Html.BeginForm("Authenticate", "Login", FormMethod.Post, new { @class = "login100-form validate-form" }))
-				{
-					<span class="login100-form-title p-b-43">
-						Iniciar Sesion
-					</span>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                @using (Html.BeginForm("Authenticate", "Login", FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <span class="login100-form-title p-b-43">
+                        Iniciar Sesion
+                    </span>
 
-					<div class="wrap-input100 validate-input" data-validate="El mail tiene que ser valido: ex@abc.xyz">
-						<input class="input100" type="text" name="email" required>
-						<span class="focus-input100"></span>
-						<span class="label-input100">Mail</span>
-					</div>
+                    <div class="wrap-input100 validate-input" data-validate="El mail tiene que ser valido: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" required />
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Mail</span>
+                    </div>
 
-					<div class="wrap-input100 validate-input" data-validate="La contraseña es necesaria">
-						<input class="input100" type="password" name="pass" required>
-						<span class="focus-input100"></span>
-						<span class="label-input100">Contraseña</span>
-					</div>
+                    <div class="wrap-input100 validate-input" data-validate="La contraseña es necesaria">
+                        <input class="input100" type="password" name="pass" required />
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Contraseña</span>
+                    </div>
 
-					<div class="flex-sb-m w-full p-t-3 p-b-32">
-						<div>
-							<a href="/Register" class="txt1">
-								Registrate
-							</a>
-						</div>
-					</div>
+                    <div class="flex-sb-m w-full p-t-3 p-b-32">
+                        <div>
+                            <a href="/Register" class="txt1">Registrate</a>
+                        </div>
+                    </div>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" href="/home">
-							Iniciar Sesion
-						</button>
-					</div>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit">Iniciar Sesion</button>
+                    </div>
 
-					@if (ViewBag.Error != null)
-					{
-						<div style="color:red;">
-							@ViewBag.Error
-						</div>
-					}
-				}
+                    @if (ViewBag.Message != null)
+                    {
+                        <div style="color:red;">
+                            @ViewBag.Message
+                        </div>
+                    }
+                }
 
-				<div class="login100-more" style="background-image:url('@Url.Content("~/img/fondoLogin.jpg")')">
-				</div>
-			</div>
-		</div>
-	</div>
+                <div class="login100-more" style="background-image:url('@Url.Content("~/img/fondoLogin.jpg")')"></div>
+            </div>
+        </div>
+    </div>
 </body>

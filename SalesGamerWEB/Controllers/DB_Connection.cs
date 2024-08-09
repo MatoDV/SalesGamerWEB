@@ -10,7 +10,7 @@ namespace SalesGamerWEB.Controllers
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(DB_Controller.connectionString))
+                using (SqlConnection connection = new SqlConnection(DB_Controller._connectionString))
                 {
                     connection.Open();
                     Console.WriteLine("Conexión establecida correctamente.");

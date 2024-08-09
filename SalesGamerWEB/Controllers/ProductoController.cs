@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SalesGamerWEB.Models;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
+using System.Text.Json;
 
 namespace SalesGamerWEB.Controllers
 {
@@ -51,6 +54,29 @@ namespace SalesGamerWEB.Controllers
             ViewBag.Categoria = categoria;
 
             return View(productos);
+        }
+
+        // Acción para agregar productos al carrito
+        [HttpPost]
+        public IActionResult AgregarAlCarrito(int id)
+        {
+            var producto = _context.Productos.Find(id);
+
+            if (producto != null)
+            {
+                List<Producto> carrito = HttpContext.Session.GetObjectFromJson<List<Producto>>("Carrito") ?? new List<Producto>();
+                carrito.Add(producto);
+                HttpContext.Session.SetObjectAsJson("Carrito", carrito);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // Acción para mostrar el carrito
+        public IActionResult Carrito()
+        {
+            List<Producto> carrito = HttpContext.Session.GetObjectFromJson<List<Producto>>("Carrito") ?? new List<Producto>();
+            return View(carrito);
         }
 
         // Detalles de un producto
@@ -132,6 +158,21 @@ namespace SalesGamerWEB.Controllers
                 _context.SaveChanges();
             }
             return RedirectToAction(nameof(Index));
+        }
+    }
+
+    // Extensiones para la sesión
+    public static class SessionExtensions
+    {
+        public static void SetObjectAsJson(this ISession session, string key, object value)
+        {
+            session.SetString(key, JsonSerializer.Serialize(value));
+        }
+
+        public static T GetObjectFromJson<T>(this ISession session, string key)
+        {
+            var value = session.GetString(key);
+            return value == null ? default(T) : JsonSerializer.Deserialize<T>(value);
         }
     }
 }
